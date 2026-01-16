@@ -87,6 +87,7 @@ async def add_service_type(update: Update, context: ContextTypes.DEFAULT_TYPE):
         keyboard = [
             [InlineKeyboardButton("❌ No Input", callback_data="input_no")],
             [InlineKeyboardButton("📧 Require Gmail", callback_data="input_gmail")],
+            [InlineKeyboardButton("📧+🔑 Require Email & Pass", callback_data="input_mailpass")],
             [InlineKeyboardButton("🔢 Require Number/ID", callback_data="input_id")],
             [InlineKeyboardButton("📝 Custom Question...", callback_data="input_custom")]
         ]
@@ -107,6 +108,8 @@ async def add_service_question(update: Update, context: ContextTypes.DEFAULT_TYP
             await finish_add_service(update, context, None)
         elif data == "input_gmail":
             await finish_add_service(update, context, "Please send your Gmail address:")
+        elif data == "input_mailpass":
+            await finish_add_service(update, context, "Please send your Email and Password:")
         elif data == "input_id":
             await finish_add_service(update, context, "Please send your Number or ID:")
         elif data == "input_custom":
