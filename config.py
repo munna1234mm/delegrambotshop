@@ -1,7 +1,9 @@
 import os
 
-USER_BOT_TOKEN = os.getenv("USER_BOT_TOKEN", "8576821763:AAGcbmGaAHSL4nfMc8JwtMd6EJMWKRj1xPk")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "8145010504:AAHpujWALJUhTw9yZfrlF5U9K9Do43fFSLA")
+# Tokens are now loaded from Environment Variables (Render/Server)
+# For local run, you can set these in your system or a .env file
+USER_BOT_TOKEN = os.getenv("USER_BOT_TOKEN", "YOUR_USER_BOT_TOKEN_HERE")
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "YOUR_ADMIN_BOT_TOKEN_HERE")
 
 # List of Admin User IDs
 ADMIN_IDS = [
